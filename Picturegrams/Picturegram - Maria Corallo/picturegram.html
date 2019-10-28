@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flicks</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+	body{
+		background: lightblue;
+	}
+
+	#content{
+		width: 500px;
+		margin: auto;
+		background: lightyellow;
+		border-radius: 5px;
+		padding: 20px;
+	}
+
+	h1{
+		font-size: 45px;
+		margin: 0px;
+		text-align: center;
+		font-family: 'Quicksand', sans-serif;
+		font-size-adjust: 10px;
+	}
+
+	img{
+		box-sizing: border-box;
+		border: 12px solid pink;
+	}
+
+	img:hover{
+		border: 2px solid magenta;
+	}
+
+	#mainpic{
+		width: calc(100% - 10px);
+		margin: 7px;
+	}
+
+	.smaller{
+		width: calc(33.3333333% - 13px);
+		margin: 5px;
+	}
+
+	.smaller:hover {
+		cursor: pointer;
+	}
+
+
+
+	</style>
+</head>
+<body>
+	<div id="content">
+
+	<h1>PictureGram</h1>
+
+	<img src="tech13.jpg" alt="Nadia and Tyana on a computer." id="mainpic">
+
+	<img src="tech14.jpg" alt="Some kid with a camera." class="smaller">
+
+	<img src="tech18.jpg" alt="A printer." class="smaller">
+
+	<img src="tech47.jpg" alt="Chris drinking water awfully close to a computer." class="smaller">
+
+	<img src="tech81.jpg" alt="Cristina on a computer." class="smaller">
+
+	<img src="https://www.techadvisor.co.uk/cmsdata/features/3520917/kids-and-computers_thumb900_1-1.jpg" class="smaller">
+
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSs0xtzAPF1ieW0hk7KLKOUk5bb5G1-n0nxgIfMIBLb49ykbpGS" class="smaller">
+
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRatLoQoUeDg3ZfyaD9qgs4zk4DG-ZxYJLqbJv2uMdhC365hKiN" class="smaller">
+
+	<img src="https://static01.nyt.com/images/2018/01/16/well/family/well-family-addiction/well-family-addiction-square320-v2.jpg" class="smaller">
+
+	<img src="https://image.freepik.com/free-photo/mother-near-kids-using-technologies_23-2147781843.jpg" class="smaller">
+
+
+
+	</div>
+
+	<script type="text/javascript">
+		let smaller = document.querySelectorAll('.smaller');
+		let bigpic = document.querySelector('#mainpic');
+
+		smaller.forEach(smallpic => {
+			smallpic.addEventListener('click', function(e) {
+				let clickedSRC = e.target.src;
+
+				let bigSRC = mainpic.src;
+				bigpic.src = clickedSRC;
+				e.target.src = bigSRC;
+			});
+		});
+	</script>
+</body>
+</html>
